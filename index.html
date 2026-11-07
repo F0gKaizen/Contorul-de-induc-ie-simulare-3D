@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contorul de inducție Ferraris</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #000; --card: #0d0f13; --line: #23272f; --ink: #f2f4f7; --text: #c8cdd5; --muted: #7c838f; --blue: #2052bb; --link: #6f9cff; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--text); font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 18px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+main { max-width: 760px; margin: 0 auto; padding: 72px 22px 60px; }
+.who { color: var(--muted); font-size: 15.5px; }
+.who b { color: var(--text); font-weight: 600; }
+h1 { color: var(--ink); font-size: 44px; line-height: 1.1; font-weight: 800; letter-spacing: -.02em; margin: 14px 0 12px; text-wrap: balance; }
+.lead { max-width: 60ch; margin: 0 0 36px; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+a.card { display: grid; gap: 8px; align-content: start; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px 22px; color: var(--text); text-decoration: none; transition: border-color .15s; }
+a.card:hover { border-color: var(--blue); }
+a.card:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+.card .tag { font-size: 13px; color: var(--link); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+.card h2 { color: var(--ink); font-size: 23px; margin: 0; line-height: 1.2; }
+.card p { margin: 0; font-size: 16px; }
+.card .go { color: var(--link); font-weight: 600; font-size: 16px; margin-top: 6px; }
+footer { color: var(--muted); font-size: 14.5px; margin-top: 48px; border-top: 1px solid var(--line); padding-top: 18px; }
+@media (max-width: 640px) { main { padding-top: 40px; } h1 { font-size: 34px; } .grid { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: reduce) { a.card { transition: none; } }
+</style>
+</head>
+<body>
+<main>
+  <div class="who">Măsurarea mărimilor electrice și neelectrice · FIE UPB</div>
+  <h1>Contorul de inducție Ferraris</h1>
+  <p class="lead">Model 3D interactiv al contorului de energie cu disc: cum transformă puterea în viteza discului, cum numără energia și cum se verifică. Proiectul are două variante.</p>
+  <div class="grid">
+    <a class="card" href="articol.html">
+      <span class="tag">Articol interactiv</span>
+      <h2>Cum funcționează, pas cu pas</h2>
+      <p>Explicație pe o singură coloană, cu figuri 3D și grafice puse direct în text: bobinele și fluxurile, fazorii, frâna, numărarea și verificarea.</p>
+      <span class="go">Accesare articol →</span>
+    </a>
+    <a class="card" href="simulator.html">
+      <span class="tag">Simulator</span>
+      <h2>Contorul, pe un singur ecran</h2>
+      <p>Modelul 3D fix în stânga și tab-uri în dreapta: consumatori, diagrama fazorială, cronometrul și curba de erori.</p>
+      <span class="go">Accesare simulator →</span>
+    </a>
+  </div>
+  <footer>Ambele pagini funcționează și fără internet: biblioteca 3D este inclusă în fișiere.</footer>
+</main>
+</body>
+</html>
